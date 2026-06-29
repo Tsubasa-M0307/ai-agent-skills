@@ -1,2 +1,30 @@
 # ai-agent-skills
 生成AIを活用した業務自動化の実装実績をまとめたポートフォリオです。
+株式会社REDEEにてWebエンジニアとして勤務しながら、AIエージェントの設計・導入・社内運用を単独で推進しました。
+カテゴリ1：Googleカレンダー
+
+#スキル名概要1google-calendar自然言語でGoogleカレンダーを操作。予定の確認・追加・変更・削除・空き時間検索・会議招待への返答に対応2calendar-slot-finder空き時間枠を最大3件に絞って提示。参加者数に応じて検索範囲を自動調整しトークンを最小化3calendar-task-prioritizerカレンダー予定をP0〜P2の3段階で優先度自動判定し、Markdownテーブル化→Slack DM通知まで一貫自動化
+
+カテゴリ2：スライド
+
+#スキル名概要4slide-creatorGoogle DriveのテンプレートをコピーしClaude in Chromeでブラウザ操作してスライドを自動編集。不要なトークン消費（スクリーンショット抑制）とテキスト置換の重複を防ぐ設計
+
+カテゴリ3：ファイル管理・ドキュメント・スプレッドシート
+
+#スキル名概要5drive-file-organizerファイル名の命名規則（日付・対象名）から種別を自動判定し、Google ドライブの対応フォルダへ自動分類・コピー。実行前に分類プランを提示して確認を求める設計6google-doc-writer議事録・調査レポートなどのビジネス文書をLLM出力から直接Google ドキュメントとして自動生成・Drive保存7spreadsheet-writer各種調査データをGoogle Sheets MCP経由でbatchUpdate、指定スプレッドシートへ一括書き込み・自動集計
+
+カテゴリ4：情報収集（7スキル）
+
+#スキル名概要8joho-shushuWebからPR記事・企業情報を自動収集し、指定のGoogleスプレッドシートへ記録。PRTimes記事調査が主用途9web-research指定した企業・テーマをWeb検索で調査し、調査レポートをGoogle Driveに自動保存10franchise-research指定業種のフランチャイズ展開企業を調査。加盟条件・費用・サポート内容をDriveとスプレッドシートに保存11news-curation指定テーマの最新ニュースを収集・要約し、Google DriveにレポートとしてをMarkdown形式で保存12industry-news特定業界の市場動向を深掘り分析。業界概況・注目トピック・トレンド考察を含む詳細レポートをDrive保存13competitor-research指定企業・業界の競合調査を実施。比較・分析・差別化ポイントの整理に特化したレポートをDrive保存14market-research市場規模・成長率・主要プレイヤー・トレンド・今後の展望を含む市場調査レポートをDrive保存
+
+カテゴリ5：議事録
+
+#スキル名概要15meeting-minutesテキストメモまたは音声ファイル（MP3/WAV等）から「議事録」と「次回会議アジェンダ」の2ドキュメントをDriveに自動生成16meeting-minutes-with-slackmeeting-minutesの機能に加え、保存完了後に指定SlackチャンネルへドキュメントURLを自動通知。Drive保存失敗時はSlack通知しない安全設計
+
+カテゴリ6：Slack
+
+#スキル名概要17slack-summarizerSlackのスレッド・チャンネルメッセージを要約し、返信案をフォーマル／カジュアルの2パターンで作成
+
+カテゴリ7：メール
+
+#スキル名概要18email-draft-writerGoogle Drive上のメールテンプレートの変数（{{会社名}}等）を置換し、GmailのDraftを自動作成。1通指定・リスト一括処理の両方に対応
